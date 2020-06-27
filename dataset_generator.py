@@ -19,7 +19,7 @@ from pandas import DataFrame
 ip =  DataFrame(ip , columns=['ip'])
 date =  DataFrame(date , columns=['date'])
 url =  DataFrame(url , columns=['url'])
-dataset = pd.concat([ip , date , url] , axis=1)
+df = pd.concat([ip , date , url] , axis=1)
 
-csv_data = dataset.to_csv(index=False)
-dataset.to_csv('log.csv' , index=False)
+csv_data = df.to_csv(index=False)
+df.to_csv('log.csv' , index=False)
