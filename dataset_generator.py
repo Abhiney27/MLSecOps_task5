@@ -1,7 +1,9 @@
 ip = []
 date= []
 url = []
+
 f = open('access_log' , 'r')
+
 for line in f:
     ip.append(line.split("- -")[0])
     date.append(line.split(']')[0].split('[')[1])
@@ -16,7 +18,7 @@ from pandas import DataFrame
 
 ip =  DataFrame(ip , columns=['ip'])
 date =  DataFrame(date , columns=['date'])
-url = df =  DataFrame(url , columns=['url'])
+url =  DataFrame(url , columns=['url'])
 dataset = pd.concat([ip , date , url] , axis=1)
 
 csv_data = dataset.to_csv(index=False)
