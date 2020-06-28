@@ -8,6 +8,8 @@ for line in f:
     ip.append(line.split("- -")[0])
     date.append(line.split(']')[0].split('[')[1])
     url.append(line.split('"')[1].split('"')[0])
+
+f.close()
         
         
 
