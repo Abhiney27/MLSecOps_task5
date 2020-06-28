@@ -2,7 +2,7 @@ ip = []
 date= []
 url = []
 
-f = open('access_log' , 'r')
+f = open('access_log.txt' , 'r')
 
 for line in f:
     ip.append(line.split("- -")[0])
