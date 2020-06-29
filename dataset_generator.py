@@ -2,7 +2,7 @@ ip = []
 date= []
 url = []
 
-f = open('access_log.txt' , 'r')
+f = open('/root/MLSecOps/access_log.txt' , 'r')
 
 for line in f:
     ip.append(line.split("- -")[0])
@@ -24,4 +24,5 @@ url =  DataFrame(url , columns=['url'])
 df = pd.concat([ip , date , url] , axis=1)
 
 csv_data = df.to_csv(index=False)
-df.to_csv('log.csv' , index=False)
+df.to_csv('/root/MLSecOps/log.csv' , index=False)
+pd.read_csv('/root/MLSecOps/log.csv')
