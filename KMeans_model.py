@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-df = pd.read_csv('log.csv')
+df = pd.read_csv('/root/MLSecOps/log.csv')
 from sklearn.preprocessing import LabelEncoder , OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 X =  df.iloc[: , :]
@@ -53,7 +53,7 @@ def CountFrequency(ip_list , ip_label):
 ip_res = CountFrequency(IPs_result['IP'].tolist(), IPs_result['ip'].tolist())
 
 
-file1 = open("blocked_ip.txt","w")
+file1 = open("/root/MLSecOps/blocked_ip.txt","w")
 file1.write(ip_res)
 file1.close()
                 
